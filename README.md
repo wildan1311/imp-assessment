@@ -17,11 +17,11 @@
 ```bash
 cd next-js-posts-crud
 npm install
+cp example.env .env.local
 npm run build
 npm run start
-cp example.env .env.local
 ```
-Change ENV NEXT_PUBLIC_API_BASE_URL to be actual url's project [Laravel backend API](../post-api)
+Change ENV NEXT_PUBLIC_API_BASE_URL to be actual url's project [Laravel backend API](post-api) eg: http://localhost:8080/api
 
 ### Technologies:
 - Next.js (App Router)
@@ -45,6 +45,7 @@ Change ENV NEXT_PUBLIC_API_BASE_URL to be actual url's project [Laravel backend 
 
 ### Setup:
 ```bash
+cd post-api
 composer install
 cp .env.example .env
 php artisan key:generate
@@ -74,9 +75,10 @@ COPY url of laravel project to env from [Next JS Project](next-js-posts-crud)
 
 ### Setup:
 ```bash
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+cd auth_crud_project
+python3 -m pip install -r requirements.txt
+python3 manage.py migrate
+python3 manage.py runserver
 ```
 
 ### Technologies:

@@ -10,7 +10,7 @@ const axiosInstance: AxiosInstance = axios.create({
 
 export function apiRequest<T = any>(config: AxiosRequestConfig): Promise<AxiosResponse<T>> {
   try {
-    console.log("API Request Config:", process.env.NEXT_PUBLIC_API_BASE_URL)
+    console.log("API Request Config:", process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8080")
     if (!config.url) {
       throw new Error("Request URL is required")
     }

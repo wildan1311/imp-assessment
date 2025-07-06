@@ -21,6 +21,7 @@ php artisan serve --port 8080
 ```
 
 COPY url of laravel project to env from [Next JS Project](../next-js-posts-crud)
+eg: http://localhost:8080/api
 
 ### Technologies:
 - Laravel 12
